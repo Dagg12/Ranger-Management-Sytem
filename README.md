@@ -368,7 +368,7 @@ If the development database creates a default owner account, change the credenti
 
 ## License
 
-This project is intended to be licensed under the **MIT License**. The repository owner will add the `LICENSE` file separately.
+This project is intended to be licensed under the **MIT License**.
 
 ---
 
