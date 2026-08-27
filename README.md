@@ -4,17 +4,16 @@
   <img src="The%20ranger%20images/landing%20page%20.png" alt="The Ranger Safari Management System" width="900" />
 </p>
 
-<p align="center">
-  <strong>A professional safari management and online booking platform built with ASP.NET Web Forms, C#, and MySQL.</strong>
-</p>
+<p align="center"><strong>A professional safari management and online booking platform built with ASP.NET Web Forms, C#, and MySQL.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/Dagg12/Ranger-Management-Sytem"><img src="https://img.shields.io/badge/ASP.NET-Web%20Forms-512BD4?logo=dotnet&logoColor=white" alt="ASP.NET Web Forms" /></a>
   <img src="https://img.shields.io/badge/C%23-.NET%20Framework%204.8.1-512BD4?logo=dotnet&logoColor=white" alt="C# and .NET Framework 4.8.1" />
+  <img src="https://img.shields.io/badge/ASP.NET-Web%20Forms-512BD4?logo=dotnet&logoColor=white" alt="ASP.NET Web Forms" />
   <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white" alt="MySQL 8.0" />
   <img src="https://img.shields.io/badge/Bootstrap-5.2.3-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap 5.2.3" />
   <img src="https://img.shields.io/badge/jQuery-3.7.0-0769AD?logo=jquery&logoColor=white" alt="jQuery 3.7.0" />
   <img src="https://img.shields.io/badge/Font%20Awesome-6.5.2-528DD7?logo=fontawesome&logoColor=white" alt="Font Awesome 6.5.2" />
+  <img src="https://img.shields.io/badge/Visual%20Studio-5C2D91?logo=visualstudio&logoColor=white" alt="Visual Studio" />
 </p>
 
 ---
@@ -37,27 +36,21 @@ The application is implemented as a classic **ASP.NET Web Forms Web Application*
 ### Client Portal
 
 - Client registration and authentication
-- Browse accommodation listings
-- Search and filter accommodation
-- Browse guided game drives
-- Search and filter game drives
+- Accommodation and game-drive discovery
+- Search and filtering
 - Capacity-aware availability checks
-- Date validation for accommodation bookings
-- Guest validation for game-drive bookings
+- Date and guest validation
 - Booking history and status tracking
 - Eligible booking cancellation
-- Responsive interface for desktop and mobile layouts
+- Responsive desktop and mobile interface
 
 ### Owner Portal
 
-- Owner authentication
-- Owner dashboard and operational statistics
+- Owner authentication and dashboard
 - Accommodation CRUD management
 - Game-drive CRUD management
-- Availability controls
-- Location management
-- Existing image selection
-- New image upload support
+- Availability and location management
+- Image selection and upload
 - Booking search and filtering
 - Booking status management
 - Filtered report preview
@@ -79,26 +72,39 @@ The application is implemented as a classic **ASP.NET Web Forms Web Application*
 ## Technology Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=cs,dotnet,mysql,bootstrap,jquery,git,github,visualstudio" alt="Technology stack icons" />
+  <img src="https://img.shields.io/badge/C%23-.NET%20Framework%204.8.1-512BD4?logo=dotnet&logoColor=white" alt="C# / .NET Framework" />
+  <img src="https://img.shields.io/badge/ASP.NET-Web%20Forms-512BD4?logo=dotnet&logoColor=white" alt="ASP.NET Web Forms" />
+  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Bootstrap-5.2.3-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap" />
+  <img src="https://img.shields.io/badge/jQuery-3.7.0-0769AD?logo=jquery&logoColor=white" alt="jQuery" />
+  <img src="https://img.shields.io/badge/Visual%20Studio-5C2D91?logo=visualstudio&logoColor=white" alt="Visual Studio" />
 </p>
 
-| Technology | Version / Role |
-|---|---|
-| <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="22" alt=".NET" /> **C# / .NET Framework** | 4.8.1 |
-| <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="22" alt="ASP.NET" /> **ASP.NET Web Forms** | Web application framework |
-| <img src="https://cdn.simpleicons.org/mysql/4479A1" width="22" alt="MySQL" /> **MySQL** | 8.0 database |
-| <img src="https://cdn.simpleicons.org/bootstrap/7952B3" width="22" alt="Bootstrap" /> **Bootstrap** | 5.2.3 UI framework |
-| <img src="https://cdn.simpleicons.org/jquery/0769AD" width="22" alt="jQuery" /> **jQuery** | 3.7.0 client-side library |
-| <img src="https://cdn.simpleicons.org/fontawesome/528DD7" width="22" alt="Font Awesome" /> **Font Awesome** | 6.5.2 interface icons |
-| **MySql.Data** | 8.0.33 database provider |
-| **Newtonsoft.Json** | 13.0.3 JSON handling |
-| <img src="https://cdn.simpleicons.org/visualstudio/5C2D91" width="22" alt="Visual Studio" /> **Visual Studio** | Recommended IDE |
+<table>
+  <thead>
+    <tr>
+      <th>Technology</th>
+      <th>Version / Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><img src="https://img.shields.io/badge/C%23-512BD4?logo=csharp&logoColor=white" alt="C#" /> <strong>C# / .NET Framework</strong></td><td>4.8.1</td></tr>
+    <tr><td><img src="https://img.shields.io/badge/ASP.NET-512BD4?logo=dotnet&logoColor=white" alt="ASP.NET" /> <strong>ASP.NET Web Forms</strong></td><td>Web application framework</td></tr>
+    <tr><td><img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white" alt="MySQL" /> <strong>MySQL</strong></td><td>8.0 database</td></tr>
+    <tr><td><img src="https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap" /> <strong>Bootstrap</strong></td><td>5.2.3 UI framework</td></tr>
+    <tr><td><img src="https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=white" alt="jQuery" /> <strong>jQuery</strong></td><td>3.7.0 client-side library</td></tr>
+    <tr><td><img src="https://img.shields.io/badge/Font%20Awesome-528DD7?logo=fontawesome&logoColor=white" alt="Font Awesome" /> <strong>Font Awesome</strong></td><td>6.5.2 interface icons</td></tr>
+    <tr><td><strong>MySql.Data</strong></td><td>8.0.33 database provider</td></tr>
+    <tr><td><strong>Newtonsoft.Json</strong></td><td>13.0.3 JSON handling</td></tr>
+    <tr><td><img src="https://img.shields.io/badge/Visual%20Studio-5C2D91?logo=visualstudio&logoColor=white" alt="Visual Studio" /> <strong>Visual Studio</strong></td><td>Recommended IDE</td></tr>
+  </tbody>
+</table>
 
 ---
 
 ## Project Structure
 
-The repository is organised by application responsibility. Web Forms pages are grouped by user-facing area instead of being exposed as a large collection of files at the repository root.
+The repository is organised by application responsibility. Web Forms pages are physically grouped under `Pages/` rather than being exposed as a collection of application pages at the repository root.
 
 ```text
 Ranger-Management-Sytem/
@@ -139,24 +145,11 @@ Ranger-Management-Sytem/
 │       └── OwnerBookings.aspx
 │
 ├── Content/
-│   └── Bootstrap and application CSS
-│
 ├── Images/
-│   └── Application imagery
-│
 ├── Scripts/
-│   ├── Bootstrap and jQuery assets
-│   └── WebForms support scripts
-│
 ├── Properties/
-│   └── AssemblyInfo.cs
-│
 ├── docs/
-│   └── PROJECT-STRUCTURE.md
-│
 ├── The ranger images/
-│   └── System screenshots and user-manual images
-│
 ├── Site.Master
 ├── Site.Mobile.Master
 ├── Global.asax
@@ -169,9 +162,7 @@ Ranger-Management-Sytem/
 └── README.md
 ```
 
-### Why the pages are grouped this way
-
-The application is still a standard ASP.NET Web Forms application. Each page keeps its `.aspx`, `.aspx.cs`, and `.aspx.designer.cs` files together inside the appropriate functional directory. The Visual Studio project file explicitly maps those files, while shared application infrastructure remains in `App_Code` and `App_Start`.
+Each Web Forms page keeps its `.aspx`, `.aspx.cs`, and `.aspx.designer.cs` files together in its functional directory. The Visual Studio project file maps those files, while shared infrastructure remains in `App_Code` and `App_Start`.
 
 The application root is configured to open `Pages/Public/Default.aspx` as the default document.
 
@@ -182,55 +173,42 @@ The application root is configured to open `Pages/Public/Default.aspx` as the de
 The repository contains screenshots of the implemented application in `The ranger images/`.
 
 ### Landing Page
-
 ![The Ranger landing page](The%20ranger%20images/landing%20page%20.png)
 
 ### Login
-
 ![Client login](The%20ranger%20images/login.png)
 
 ### Registration
-
 ![Client registration](The%20ranger%20images/Register.png)
 
 ### Accommodation
-
 ![Accommodation catalogue](The%20ranger%20images/Acommodations.png)
 
 ### Game Drives
-
 ![Game-drive catalogue](The%20ranger%20images/Gamedrive.png)
 
 ### Client Dashboard
-
 ![Client dashboard](The%20ranger%20images/client-Dashboard.png)
 
 ### Accommodation Booking
-
 ![Accommodation booking](The%20ranger%20images/client-accomodation-booking.png)
 
 ### Game-Drive Booking
-
 ![Game-drive booking](The%20ranger%20images/client-drive-booking.png)
 
 ### Owner Dashboard
-
 ![Owner dashboard](The%20ranger%20images/Owner-dashboard.png)
 
 ### Manage Accommodation
-
 ![Manage accommodation](The%20ranger%20images/Manage%20accomodation.png)
 
 ### Manage Game Drives
-
 ![Manage game drives](The%20ranger%20images/Manage%20drive.png)
 
 ### Manage Bookings
-
 ![Manage bookings](The%20ranger%20images/Manage%20bookings.png)
 
 ### Reports
-
 ![Booking report](The%20ranger%20images/Report.png)
 
 ---
@@ -239,7 +217,7 @@ The repository contains screenshots of the implemented application in `The range
 
 The application uses the **SafariManagement** MySQL database.
 
-The main data areas are:
+Main data areas include:
 
 - `Client`
 - `Owner`
@@ -264,7 +242,7 @@ Do not run destructive schema resets against an existing production database.
 - Git
 - NuGet package restore support
 
-### Clone the repository
+### Clone
 
 ```bash
 git clone https://github.com/Dagg12/Ranger-Management-Sytem.git
@@ -277,19 +255,9 @@ Create or connect the application to the `SafariManagement` database and update 
 
 ### Open the solution
 
-Open:
+Open `The Ranger.sln`, restore NuGet packages, rebuild the solution and start the application using IIS Express.
 
-```text
-The Ranger.sln
-```
-
-Restore NuGet packages, rebuild the solution and start the application using IIS Express.
-
-The default application document points to:
-
-```text
-Pages/Public/Default.aspx
-```
+The default application document points to `Pages/Public/Default.aspx`.
 
 ---
 
@@ -298,57 +266,17 @@ Pages/Public/Default.aspx
 ### Client
 
 ```text
-Register
-   |
-   v
-Login
-   |
-   v
-Browse Accommodation / Game Drives
-   |
-   v
-Select Experience
-   |
-   v
-Choose Dates / Guests
-   |
-   v
-Check Availability
-   |
-   v
-Create Booking
-   |
-   v
-Client Dashboard
-   |
-   v
-View or Cancel Eligible Booking
+Register → Login → Browse Experiences → Select Experience
+→ Choose Dates / Guests → Check Availability → Create Booking
+→ Client Dashboard → View or Cancel Eligible Booking
 ```
 
 ### Owner
 
 ```text
-Owner Login
-   |
-   v
-Owner Dashboard
-   |
-   +----------------------+----------------------+
-   |                      |                      |
-   v                      v                      v
-Accommodation        Game Drives             Bookings
-Management           Management              & Reports
-   |                      |                      |
-   +----------------------+----------------------+
-                          |
-                          v
-                   Search / Filter
-                          |
-                          v
-                  Update Status
-                          |
-                          v
-                    Generate Report
+Owner Login → Owner Dashboard
+→ Accommodation / Game Drives / Bookings & Reports
+→ Search / Filter → Update Status → Generate Report
 ```
 
 ---
@@ -359,7 +287,7 @@ Management           Management              & Reports
 
 - Only authenticated clients can create bookings.
 - Check-out must be later than check-in.
-- Guest count cannot exceed the accommodation capacity.
+- Guest count cannot exceed accommodation capacity.
 - Conflicting pending or confirmed reservations are rejected.
 
 ### Game Drives
@@ -385,15 +313,7 @@ Documentation screenshots are stored separately in `The ranger images/`.
 
 `App_Code/ImageHelper.cs` provides image selection, validation and fallback handling. Owner inventory pages allow an existing application image to be selected or a supported image to be uploaded.
 
-Supported upload formats include:
-
-```text
-.jpg
-.jpeg
-.png
-.webp
-.avif
-```
+Supported upload formats include `.jpg`, `.jpeg`, `.png`, `.webp`, and `.avif`.
 
 ---
 
@@ -452,7 +372,4 @@ This project is intended to be licensed under the **MIT License**. The repositor
 
 ---
 
-<p align="center">
-  <strong>The Ranger</strong><br />
-  <sub>Wild. Simple. Memorable.</sub>
-</p>
+<p align="center"><strong>The Ranger</strong><br /><sub>Wild. Simple. Memorable.</sub></p>
