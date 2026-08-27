@@ -1,304 +1,270 @@
 # 🦁 The Ranger — Safari Management System
 
-A complete safari management and booking web application built with **ASP.NET Web Forms, C#, and MySQL**. The system supports clients who want to discover accommodation and game drives, make bookings, manage their reservations, and owners who need to manage their safari inventory and bookings.
+<p align="center">
+  <img src="The%20ranger%20images/landing%20page%20.png" alt="The Ranger Safari Management System" width="900" />
+</p>
 
-> **Academic project:** Developed for CMPG213/CMPG223 using the supplied `SafariManagement` MySQL database.
+<p align="center">
+  <strong>A complete safari management and online booking system built with ASP.NET Web Forms, C#, and MySQL.</strong>
+</p>
 
-![The Ranger landing page](The%20ranger%20images/landing%20page%20.png)
+<p align="center">
+  <img src="https://img.shields.io/badge/C%23-.NET%20Framework%204.8.1-512BD4?logo=.net&logoColor=white" alt="C# .NET Framework 4.8.1" />
+  <img src="https://img.shields.io/badge/ASP.NET-Web%20Forms-512BD4?logo=.net&logoColor=white" alt="ASP.NET Web Forms" />
+  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white" alt="MySQL 8.0" />
+  <img src="https://img.shields.io/badge/Bootstrap-5.2.3-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap 5.2.3" />
+  <img src="https://img.shields.io/badge/jQuery-3.7.0-0769AD?logo=jquery&logoColor=white" alt="jQuery 3.7.0" />
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License" />
+</p>
 
-## 📌 Overview
+---
 
-The Ranger provides two main user experiences:
+## 📖 Overview
 
-- **Clients** can browse accommodation and game drives, register and sign in, make bookings, view their reservations, and cancel eligible bookings.
-- **Owners** can manage their accommodation, manage game drives, review and update bookings, filter booking information, and generate booking reports.
+**The Ranger** is a web-based safari management platform designed to make it easy for clients to discover safari accommodation and guided game drives, check availability, and manage their bookings.
 
-The application is built around the existing `SafariManagement` database and is designed to work with the current database structure rather than recreating the schema on every run.
+The system also provides an owner-facing management area for maintaining accommodation, game drives, locations, bookings, images, and reports.
+
+The application uses the existing **`SafariManagement` MySQL database** and is implemented using the classic **ASP.NET Web Forms** application model.
 
 ---
 
 ## ✨ Features
 
-### Client features
+### 👤 Client Experience
 
-- Client registration and authentication
-- Client dashboard
-- Accommodation browsing and filtering
-- Game-drive browsing and filtering
-- Accommodation booking
-- Game-drive booking
-- Booking validation and availability checks
-- Booking history and cancellation
-- Capacity-aware booking rules
-- Safari and accommodation imagery
-- Responsive Bootstrap-based interface
+- 🔐 Client registration and authentication
+- 🏠 Browse safari accommodation
+- 🔎 Filter accommodation by location and capacity
+- 🦒 Browse guided game drives
+- 📍 Filter game drives by location
+- 📅 Select booking dates
+- 👥 Capacity-aware booking validation
+- ✅ Availability checking
+- 🧾 View booking history
+- ❌ Cancel eligible bookings
+- 🖼️ Safari accommodation and wildlife imagery
+- 📱 Responsive Bootstrap interface
 
-### Owner features
+### 🛡️ Owner Management
 
-- Secure owner login
-- Owner dashboard
-- Accommodation management
-- Game-drive management
-- Image selection and image uploads
-- Location management
-- Booking management
-- Booking search and filtering
-- Booking status updates
-- CSV booking reports
-- PDF/report support
+- 🔐 Secure owner login
+- 📊 Owner dashboard
+- 🏠 Create, edit and manage accommodation
+- 🦒 Create, edit and manage game drives
+- 📍 Manage locations
+- 🖼️ Select existing images or upload new images
+- 📋 Search and filter bookings
+- 🔄 Update booking statuses
+- 📄 Generate booking reports
+- 📊 Export filtered booking information to CSV
 
-### Application reliability improvements
+### ⚙️ Application Improvements
 
-- Fixed ASP.NET Web Forms `Eval(...)` data-binding issues by using explicit public properties and data-bound controls.
-- Improved Repeater rendering across client and owner pages.
-- Added reliable image selection with database `image_path` support and fallback matching.
-- Added development seed data without unnecessarily duplicating existing inventory.
-- Added stronger booking validation for dates, capacity, authentication, and availability.
-- Improved money and dashboard-counter formatting so values are displayed correctly.
-- Added request completion/redirect handling after successful bookings.
+- Explicit Web Forms data binding instead of fragile `Eval(...)` usage where appropriate
+- Reliable database-backed image paths with fallback handling
+- Stronger booking validation
+- Capacity and availability checks
+- Correct currency and dashboard-counter formatting
+- Safer post-booking redirects
+- Development seed data that avoids unnecessary duplication
 
 ---
 
-## 🛠️ Technology Stack
+## 🧰 Technology Stack
 
 | Technology | Purpose |
-| --- | --- |
-| **C#** | Application and server-side logic |
-| **ASP.NET Web Forms** | Web application framework |
-| **.NET Framework 4.8.1** | Application runtime/target framework |
-| **MySQL** | Relational database |
-| **MySql.Data 8.0.33** | MySQL connectivity |
-| **Bootstrap 5.2.3** | Responsive UI and components |
-| **jQuery 3.7.0** | Client-side scripting |
-| **Newtonsoft.Json 13.0.3** | JSON handling |
-| **Visual Studio** | Recommended development environment |
+|---|---|
+| 🔷 **C#** | Application and server-side logic |
+| 🌐 **ASP.NET Web Forms** | Web application framework |
+| ⚙️ **.NET Framework 4.8.1** | Application runtime |
+| 🐬 **MySQL 8.0** | Relational database |
+| 🔌 **MySql.Data 8.0.33** | MySQL connectivity |
+| 🎨 **Bootstrap 5.2.3** | Responsive UI components |
+| ⚡ **jQuery 3.7.0** | Client-side scripting |
+| 🧩 **Newtonsoft.Json 13.0.3** | JSON handling |
+| 💻 **Visual Studio** | Recommended development environment |
 
 ---
 
-## 🏗️ Application Architecture
+## 🏗️ Project Structure
 
-The application follows a conventional ASP.NET Web Forms structure:
-
-```text
-Browser
-   │
-   ▼
-ASP.NET Web Forms Pages (.aspx)
-   │
-   ├── Client pages
-   │   ├── Login / Registration
-   │   ├── Accommodation
-   │   ├── Game Drives
-   │   ├── Booking pages
-   │   └── Client Dashboard
-   │
-   └── Owner pages
-       ├── Owner Dashboard
-       ├── Accommodation Management
-       ├── Game Drive Management
-       └── Booking Management
-   │
-   ▼
-Code-behind (.aspx.cs)
-   │
-   ▼
-Shared helpers / application services
-   │
-   ├── Database.cs
-   ├── DatabaseInitializer.cs
-   ├── ImageHelper.cs
-   ├── PasswordHelper.cs
-   └── PdfReportHelper.cs
-   │
-   ▼
-MySQL — SafariManagement
-```
-
-For a more detailed repository map, see [`docs/PROJECT-STRUCTURE.md`](docs/PROJECT-STRUCTURE.md).
-
----
-
-## 📂 Repository Structure
+The repository is organised around the conventions of a classic ASP.NET Web Forms application while keeping shared code, assets and documentation separated.
 
 ```text
 Ranger-Management-Sytem/
-├── App_Code/
-│   ├── Database.cs
-│   ├── DatabaseInitializer.cs
-│   ├── ImageHelper.cs
-│   ├── PasswordHelper.cs
-│   └── PdfReportHelper.cs
 │
-├── App_Start/
+├── 📁 App_Code/                         # Shared application helpers
+│   ├── Database.cs                      # MySQL connection helpers
+│   ├── DatabaseInitializer.cs           # Development seed/initialisation
+│   ├── ImageHelper.cs                   # Image selection/fallback logic
+│   ├── PasswordHelper.cs                # Password hashing/verification
+│   └── PdfReportHelper.cs               # Report generation
+│
+├── 📁 App_Start/                        # Application startup configuration
 │   ├── BundleConfig.cs
 │   └── RouteConfig.cs
 │
-├── Content/                     # Bootstrap and application CSS
-├── Images/                      # Application imagery
-├── Scripts/                     # JavaScript and Web Forms assets
-├── Properties/                  # Assembly metadata
-├── The ranger images/           # UI screenshots and project images
-├── docs/                        # Technical documentation
+├── 📁 Content/                          # CSS and Bootstrap assets
+├── 📁 Images/                           # Application images
+├── 📁 Scripts/                          # JavaScript and Web Forms assets
+├── 📁 Properties/                       # Assembly metadata
+├── 📁 docs/                             # Technical documentation
 │   └── PROJECT-STRUCTURE.md
+├── 📁 The ranger images/                # Screenshots and documentation images
 │
-├── Default.aspx                 # Landing page
-├── Login.aspx                   # Client/owner login
-├── Register.aspx                # Client registration
-├── Accommodation.aspx          # Accommodation catalogue
-├── AccommodationBooking.aspx   # Accommodation booking
-├── GameDrives.aspx              # Game-drive catalogue
-├── GameDriveBooking.aspx        # Game-drive booking
-├── ClientDashboard.aspx         # Client reservations
-├── OwnerDashboard.aspx          # Owner dashboard
-├── OwnerAccommodation.aspx      # Owner accommodation management
-├── OwnerGameDrives.aspx         # Owner game-drive management
-├── OwnerBookings.aspx            # Owner booking management
+├── 🌐 *.aspx                            # Web Forms pages
+├── 💻 *.aspx.cs                         # Page code-behind
+├── ⚙️ *.aspx.designer.cs                # Visual Studio designer files
 │
-├── DatabaseUpgrade-Optional.sql
-├── The Ranger.csproj
-├── The Ranger.sln
-├── Web.config
-└── README.md
+├── Site.Master                          # Shared site layout/navigation
+├── Site.Mobile.Master                   # Mobile master page
+├── Global.asax                          # Application lifecycle
+├── Web.config                           # Runtime/database configuration
+├── Bundle.config                        # Bundle configuration
+├── DatabaseUpgrade-Optional.sql         # Optional database migration
+├── packages.config                      # NuGet dependencies
+├── The Ranger.csproj                    # Visual Studio project
+├── The Ranger.sln                       # Visual Studio solution
+└── README.md                            # Project documentation
 ```
+
+> **Note:** Web Forms pages remain at the project root because the application uses the classic ASP.NET Web Application model. Moving `.aspx`, designer and code-behind files into new folders without updating the project metadata and page/resource paths can break the application. The structure therefore prioritises a clean, conventional Web Forms layout while keeping the running application stable.
+
+For the detailed technical map, see [`docs/PROJECT-STRUCTURE.md`](docs/PROJECT-STRUCTURE.md).
 
 ---
 
-# 📸 System Screenshots
+## 🖥️ System Screenshots
 
-The repository already contains screenshots of the implemented system. The most important screens are included below so the README gives a visual overview of the application.
+The repository includes screenshots of the implemented system.
 
-## Landing Page
+### 🏠 Landing Page
 
 ![The Ranger landing page](The%20ranger%20images/landing%20page%20.png)
 
-## Client Login
+### 🔐 Login
 
 ![Client login](The%20ranger%20images/login.png)
 
-## Client Registration
+### 📝 Registration
 
 ![Client registration](The%20ranger%20images/Register.png)
 
-## Accommodation
+### 🏕️ Accommodation
 
 ![Accommodation catalogue](The%20ranger%20images/Acommodations.png)
 
-## Game Drives
+### 🦒 Game Drives
 
 ![Game-drive catalogue](The%20ranger%20images/Gamedrive.png)
 
-## Client Dashboard
+### 👤 Client Dashboard
 
 ![Client dashboard](The%20ranger%20images/client-Dashboard.png)
 
-## Accommodation Booking
+### 🏠 Accommodation Booking
 
 ![Accommodation booking](The%20ranger%20images/client-accomodation-booking.png)
 
-## Game-Drive Booking
+### 🦒 Game-Drive Booking
 
 ![Game-drive booking](The%20ranger%20images/client-drive-booking.png)
 
-## Owner Dashboard
+### 🛡️ Owner Dashboard
 
 ![Owner dashboard](The%20ranger%20images/Owner-dashboard.png)
 
-## Manage Accommodation
+### 🏠 Manage Accommodation
 
 ![Manage accommodation](The%20ranger%20images/Manage%20accomodation.png)
 
-## Manage Game Drives
+### 🦒 Manage Game Drives
 
 ![Manage game drives](The%20ranger%20images/Manage%20drive.png)
 
-## Manage Bookings
+### 📋 Manage Bookings
 
 ![Manage bookings](The%20ranger%20images/Manage%20bookings.png)
 
-## Reports
+### 📊 Reports
 
 ![Booking report](The%20ranger%20images/Report.png)
 
 ---
 
-# 🗄️ Database
+## 🗄️ Database
 
 The application uses the existing **`SafariManagement`** MySQL database.
 
-The application works with these core tables:
+Core database areas include:
 
-- `Client`
-- `Owner`
-- `Accommodation`
-- `GameDrive`
-- `Bookings`
-- `DriveBookings`
+- 👤 `Client`
+- 🛡️ `Owner`
+- 🏠 `Accommodation`
+- 🦒 `GameDrive`
+- 📋 `Bookings`
+- 🚙 `DriveBookings`
 
-The application does **not** recreate or destructively reset the database on startup.
+The application is designed to work with the existing schema rather than destructively recreating the database during normal startup.
 
-### Image fields
+### 🖼️ Image Paths
 
-The current application supports image paths for accommodation and game-drive records. `DatabaseUpgrade-Optional.sql` is provided for older databases that may not yet contain the required image-path fields or indexes.
+Accommodation and game-drive records support database image paths. `DatabaseUpgrade-Optional.sql` can be used when an older installation is missing the required image fields or indexes.
 
-> ⚠️ Do not execute the original full database schema against a live database if it contains destructive `DROP`/recreate operations. Use the optional upgrade script only when the existing database actually requires it.
+> ⚠️ Do not run a destructive full schema reset against an existing production database. Use the optional upgrade script only when the database actually requires it.
 
 ---
 
-# 🚀 Getting Started
+## 🚀 Getting Started
 
-## Prerequisites
+### 📋 Prerequisites
 
-Before running the project, install:
+Install the following before running the project:
 
-1. **Visual Studio** with ASP.NET/.NET Framework development support.
-2. **.NET Framework 4.8.1**.
-3. **MySQL Server**.
-4. **Git**.
-5. The required NuGet packages listed in `packages.config`.
+1. 💻 Visual Studio with ASP.NET/.NET Framework development support
+2. ⚙️ .NET Framework 4.8.1
+3. 🐬 MySQL Server
+4. 🔧 Git
+5. 📦 NuGet dependencies listed in `packages.config`
 
-## 1. Clone the repository
+### 1. 📥 Clone the repository
 
 ```bash
 git clone https://github.com/Dagg12/Ranger-Management-Sytem.git
 cd Ranger-Management-Sytem
 ```
 
-## 2. Configure MySQL
+### 2. 🐬 Configure MySQL
 
-Make sure MySQL is running and that the `SafariManagement` database exists.
+Make sure MySQL is running and the `SafariManagement` database exists.
 
-Review `Web.config` and update the connection string for your local MySQL environment.
+Update the connection string in `Web.config` to match your local MySQL environment.
 
-For development, the project expects the database to be available before the application starts.
+### 3. 💻 Open the solution
 
-## 3. Open the solution
-
-Open:
+Open the following file in Visual Studio:
 
 ```text
 The Ranger.sln
 ```
 
-in Visual Studio.
+### 4. 📦 Restore dependencies
 
-## 4. Restore NuGet packages
+Restore the NuGet packages and rebuild the solution.
 
-Restore the packages configured in `packages.config`, then rebuild the solution.
-
-## 5. Build and run
-
-In Visual Studio:
+### 5. ▶️ Run the application
 
 1. Select the appropriate build configuration.
 2. Rebuild the solution.
 3. Start the application with IIS Express.
-4. Open the site in your browser.
+4. Open the application in your browser.
 
 ---
 
-# 👥 User Workflows
+## 👥 User Workflows
 
-## Client workflow
+### 👤 Client
 
 ```text
 Register
@@ -311,16 +277,16 @@ Select Experience
    ↓
 Choose Dates / Guests
    ↓
-Validate Availability
+Check Availability
    ↓
 Create Booking
    ↓
 Client Dashboard
    ↓
-View or Cancel Eligible Booking
+View / Cancel Eligible Booking
 ```
 
-## Owner workflow
+### 🛡️ Owner
 
 ```text
 Owner Login
@@ -339,71 +305,61 @@ Owner Dashboard
 
 ---
 
-# 🔐 Booking Rules
+## 🔐 Booking Rules
 
-The system implements validation rules intended to prevent invalid or conflicting bookings.
-
-### Accommodation
+### 🏠 Accommodation
 
 - Only authenticated clients can create bookings.
 - Check-in and check-out dates must be valid.
-- Check-out must occur after check-in.
+- Check-out must be after check-in.
 - Guest counts cannot exceed accommodation capacity.
-- Occupied dates are rejected when existing pending or confirmed bookings conflict.
+- Conflicting pending or confirmed bookings are rejected.
 
-### Game Drives
+### 🦒 Game Drives
 
 - Only authenticated clients can create bookings.
-- Guest capacity is checked against existing pending and confirmed bookings.
+- Guest capacity is checked against existing bookings.
 - Full drives cannot accept additional guests.
 
-### Booking management
+### 📋 Booking Management
 
-- Clients can cancel eligible pending/confirmed bookings.
+- Clients can cancel eligible bookings.
 - Owners can update booking status.
-- Owners manage only their own accommodation and game-drive inventory.
+- Owners manage their own accommodation and game-drive inventory.
 - Owner self-registration is intentionally not provided.
 
 ---
 
-# 🌱 Development Seed Data
+## 🌱 Development Seed Data
 
-For development environments, the application can initialise starter data when the relevant records are missing.
+Development environments can initialise starter records when required records do not already exist.
 
-A development owner account is created when no owner exists:
+A development owner account may be created when no owner exists:
 
 ```text
 Email:    owner@theranger.co.za
 Password: Ranger123
 ```
 
-Starter accommodation and game-drive records can also be inserted when the corresponding inventory is empty. Existing records are not intentionally duplicated when matching records already exist.
-
-> ⚠️ These credentials are for development/demo use only. Change or remove them before deploying the application to a production environment.
+> ⚠️ Development credentials are for local/demo use only. Change or remove them before any production deployment.
 
 ---
 
-# 🖼️ Image Management
+## 🖼️ Image Management
 
-The application separates database data from image selection through `App_Code/ImageHelper.cs`.
+Application imagery is stored in `Images/`, while screenshots used by the documentation are stored in `The ranger images/`.
 
-Images are stored in the repository under `Images/`, while the UI screenshots used for documentation are stored under `The ranger images/`.
-
-Accommodation and game-drive records can use an image path when available, with fallback matching for older records.
-
-Owners can select an existing image or upload supported image formats when adding or editing inventory.
+`App_Code/ImageHelper.cs` handles image selection and fallback behaviour. Owners can select existing images or upload supported image formats when managing inventory.
 
 ---
 
-# 🧪 Testing Checklist
-
-Before considering a local build ready, test the following flows:
+## 🧪 Testing Checklist
 
 - [ ] Client registration
 - [ ] Client login
 - [ ] Owner login
-- [ ] Accommodation search/filtering
-- [ ] Game-drive search/filtering
+- [ ] Accommodation filtering
+- [ ] Game-drive filtering
 - [ ] Valid accommodation booking
 - [ ] Invalid accommodation date validation
 - [ ] Accommodation capacity validation
@@ -412,54 +368,49 @@ Before considering a local build ready, test the following flows:
 - [ ] Game-drive capacity validation
 - [ ] Client booking history
 - [ ] Client booking cancellation
-- [ ] Owner accommodation creation/edit/delete
-- [ ] Owner game-drive creation/edit/delete
+- [ ] Owner accommodation CRUD operations
+- [ ] Owner game-drive CRUD operations
 - [ ] Owner booking search/filtering
-- [ ] Owner booking status updates
+- [ ] Booking status updates
 - [ ] CSV/report generation
 - [ ] Image selection and upload
 
 ---
 
-# 🐛 Known Development Considerations
+## 🐛 Development Notes
 
-- The project is built on the classic ASP.NET Web Forms model and targets .NET Framework 4.8.1.
-- Local MySQL configuration is required before the application can function correctly.
-- The supplied database schema and the application must remain compatible, especially around booking relationships and image-path fields.
-- Development seed credentials should never be reused for a production deployment.
-
----
-
-# 📚 Documentation
-
-- [`docs/PROJECT-STRUCTURE.md`](docs/PROJECT-STRUCTURE.md) — repository structure and architectural guidance.
-- `DatabaseUpgrade-Optional.sql` — optional database upgrade for older installations.
-- `The ranger images/` — system screenshots and UI documentation images.
+- The application targets **.NET Framework 4.8.1** and uses classic ASP.NET Web Forms.
+- MySQL must be configured before the application can operate correctly.
+- The application and `SafariManagement` database schema must remain compatible.
+- Development seed credentials should never be reused in production.
 
 ---
 
-# 🎓 Academic Context
+## 📚 Documentation
 
-The Ranger was developed as a university project for **CMPG213/CMPG223**, combining database design, web application development, server-side programming, user authentication, booking logic, and user-interface design.
-
-The project demonstrates how a traditional ASP.NET Web Forms application can be structured around a relational MySQL database while providing separate client and owner workflows.
+- 📘 [`docs/PROJECT-STRUCTURE.md`](docs/PROJECT-STRUCTURE.md) — repository and architecture guide
+- 🗄️ `DatabaseUpgrade-Optional.sql` — optional database upgrade
+- 📸 `The ranger images/` — system screenshots
 
 ---
 
-# 👤 Author
+## 👤 Author
 
 **Dagg12**
 
-GitHub: [Dagg12](https://github.com/Dagg12)
+🐙 GitHub: [Dagg12](https://github.com/Dagg12)
 
 ---
 
-# 📄 License
+## 📄 License
 
-No explicit open-source license is currently included in the repository. Unless a license is added, the project should be treated as **all rights reserved** by the repository owner.
+This project will be licensed under the **MIT License** by the repository owner.
+
+The `LICENSE` file can be added separately by the owner.
 
 ---
 
-## ⭐ Project
-
-If you are reviewing or evaluating this project, the repository contains the complete ASP.NET Web Forms source, application assets, database integration code, and screenshots of the implemented system.
+<p align="center">
+  <strong>🦁 The Ranger</strong><br />
+  <sub>Wild. Simple. Memorable.</sub>
+</p>
