@@ -14,7 +14,6 @@
   <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white" alt="MySQL 8.0" />
   <img src="https://img.shields.io/badge/Bootstrap-5.2.3-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap 5.2.3" />
   <img src="https://img.shields.io/badge/jQuery-3.7.0-0769AD?logo=jquery&logoColor=white" alt="jQuery 3.7.0" />
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License" />
 </p>
 
 ---
@@ -89,7 +88,7 @@ The application uses the existing **`SafariManagement` MySQL database** and is i
 
 ## 🏗️ Project Structure
 
-The repository is organised around the conventions of a classic ASP.NET Web Forms application while keeping shared code, assets and documentation separated.
+The repository follows the conventions of a classic ASP.NET Web Forms application while keeping shared code, assets and documentation separated.
 
 ```text
 Ranger-Management-Sytem/
@@ -129,7 +128,7 @@ Ranger-Management-Sytem/
 └── README.md                            # Project documentation
 ```
 
-> **Note:** Web Forms pages remain at the project root because the application uses the classic ASP.NET Web Application model. Moving `.aspx`, designer and code-behind files into new folders without updating the project metadata and page/resource paths can break the application. The structure therefore prioritises a clean, conventional Web Forms layout while keeping the running application stable.
+> **Web Forms note:** The `.aspx`, `.aspx.cs`, and `.aspx.designer.cs` files remain at the application root because this project uses the classic ASP.NET Web Application model. Keeping these files together preserves Visual Studio's code-behind/designer relationship and avoids breaking page/resource paths. Shared code and assets are already grouped into dedicated folders.
 
 For the detailed technical map, see [`docs/PROJECT-STRUCTURE.md`](docs/PROJECT-STRUCTURE.md).
 
@@ -404,9 +403,7 @@ Application imagery is stored in `Images/`, while screenshots used by the docume
 
 ## 📄 License
 
-This project will be licensed under the **MIT License** by the repository owner.
-
-The `LICENSE` file can be added separately by the owner.
+The project is intended to be released under the **MIT License**. The repository owner will add the `LICENSE` file separately.
 
 ---
 
